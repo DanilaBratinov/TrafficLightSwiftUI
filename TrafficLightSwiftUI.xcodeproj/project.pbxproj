@@ -37,6 +37,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4505C17E296F216C008E2EAF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				45420802296C94F8008BEBE3 /* ContentView.swift */,
+				4542080E296C9556008BEBE3 /* ColorCircleView.swift */,
+				45420810296C96AD008BEBE3 /* TrafficLightFrameView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4505C17F296F2177008E2EAF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				45420800296C94F8008BEBE3 /* TrafficLightSwiftUIApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		454207F4296C94F7008BEBE3 = {
 			isa = PBXGroup;
 			children = (
@@ -57,10 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				45420818296CABC9008BEBE3 /* Info.plist */,
-				45420800296C94F8008BEBE3 /* TrafficLightSwiftUIApp.swift */,
-				45420802296C94F8008BEBE3 /* ContentView.swift */,
-				4542080E296C9556008BEBE3 /* ColorCircleView.swift */,
-				45420810296C96AD008BEBE3 /* TrafficLightFrameView.swift */,
+				4505C17F296F2177008E2EAF /* App */,
+				4505C17E296F216C008E2EAF /* Views */,
 				45420804296C94FB008BEBE3 /* Assets.xcassets */,
 				45420806296C94FB008BEBE3 /* Preview Content */,
 			);
