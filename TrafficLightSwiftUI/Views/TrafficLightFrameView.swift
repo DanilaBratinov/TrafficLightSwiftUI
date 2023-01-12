@@ -1,19 +1,20 @@
 import SwiftUI
 
 struct TrafficLightFrameView: View {
-    var opacityRed: Double
-    var opacityYellow: Double
-    var opacityGreen: Double
-
+    let opacityRed: Double
+    let opacityYellow: Double
+    let opacityGreen: Double
+    
     var body: some View {
         ZStack {
             Color(UIColor.darkGray)
                 .frame(width: 275, height: 600)
                 .cornerRadius(40)
             VStack {
-                ColorCircleView(color: Color(red: 255, green: 0, blue: 0, opacity: opacityRed))
-                ColorCircleView(color: Color(red: 255, green: 255, blue: 0, opacity: opacityYellow))
-                ColorCircleView(color: Color(red: 0, green: 255, blue: 0, opacity: opacityGreen))
+                ColorCircleView(color: .red, opacity: opacityRed)
+                ColorCircleView(color: .yellow, opacity: opacityYellow)
+                ColorCircleView(color: .green, opacity: opacityGreen)
+
             }
         }
     }

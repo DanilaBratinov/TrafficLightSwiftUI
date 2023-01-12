@@ -1,33 +1,29 @@
 import SwiftUI
 
 struct ContentView: View {
-    private let lightIsOn = 1.0
-    private let lightIsOff = 0.001
-    
     @State private var buttonTitle = "START"
     
-    @State private var opacityRed = 0.001
-    @State private var opacityYellow = 0.001
-    @State private var opacityGreen = 0.001
+    @State private var opacityRed = 0.3
+    @State private var opacityYellow = 0.3
+    @State private var opacityGreen = 0.3
     
     @State private var currentLight = CurrentLight.red
-    
-    var body: some View {
-        VStack {
-            TrafficLightFrameView(
-                opacityRed: opacityRed,
-                opacityYellow: opacityYellow,
-                opacityGreen: opacityGreen
-            )
-            Spacer()
-            buttonInfo
-        }
-    }
+
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+extension ContentView {
+    var body: some View {
+        VStack {
+            TrafficLightFrameView(opacityRed: opacityRed, opacityYellow: opacityYellow, opacityGreen: opacityGreen)
+            Spacer()
+            buttonInfo
+        }
     }
 }
 
@@ -55,6 +51,10 @@ extension ContentView {
 //MARK: - ChangeColorFunc
 extension ContentView {
     private func changeAccentColor() {
+        
+        let lightIsOn = 1.0
+        let lightIsOff = 0.1
+        
         switch currentLight {
         case .red:
             opacityGreen = lightIsOff
