@@ -70,6 +70,8 @@ extension ContentView {
             currentLight = .red
         }
         
-        buttonTitle = "NEXT"
+        if buttonTitle == "START" {
+            buttonTitle = "NEXT"
+        }
     }
 }

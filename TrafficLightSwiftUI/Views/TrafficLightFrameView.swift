@@ -10,7 +10,8 @@ struct TrafficLightFrameView: View {
             Color(UIColor.darkGray)
                 .frame(width: 275, height: 600)
                 .cornerRadius(40)
-            VStack {
+            
+            VStack(spacing: 20) {
                 ColorCircleView(color: .red, opacity: opacityRed)
                 ColorCircleView(color: .yellow, opacity: opacityYellow)
                 ColorCircleView(color: .green, opacity: opacityGreen)
